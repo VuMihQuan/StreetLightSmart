@@ -1,9 +1,9 @@
 Dependencies for Project 'LightSystem_HAL', Target 'LightSystem_HAL': (DO NOT MODIFY !)
 CompilerVersion: 6190000::V6.19::ARMCLANG
-F (startup_stm32f103xb.s)(0x6555CE25)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o lightsystem_hal/startup_stm32f103xb.o)
-F (.\LED.c)(0x6558D749)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/led.o -MD)
+F (startup_stm32f103xb.s)(0x655A1E47)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o lightsystem_hal/startup_stm32f103xb.o)
+F (.\LED.c)(0x6558E99B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/led.o -MD)
 I (..\MDK-ARM\LED.h)(0x6558D749)
-I (..\Core\Inc\main.h)(0x6554EA7E)
+I (..\Core\Inc\main.h)(0x6558E849)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x64898AFE)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x654B42CC)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x64898AFE)
@@ -37,7 +37,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x64898AFE)
 F (.\LED.h)(0x6558D749)()
 F (.\LDR.c)(0x6558D571)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/ldr.o -MD)
 I (..\MDK-ARM\LDR.h)(0x65579132)
-I (..\Core\Inc\main.h)(0x6554EA7E)
+I (..\Core\Inc\main.h)(0x6558E849)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x64898AFE)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x654B42CC)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x64898AFE)
@@ -71,7 +71,7 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x64898AFE)
 F (.\LDR.h)(0x65579132)()
 F (.\IR_sensor.c)(0x6558D80F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/ir_sensor.o -MD)
 I (..\MDK-ARM\IR_sensor.h)(0x65589580)
-I (..\Core\Inc\main.h)(0x6554EA7E)
+I (..\Core\Inc\main.h)(0x6558E849)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x64898AFE)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x654B42CC)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x64898AFE)
@@ -105,9 +105,9 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x64898AFE)
 I (..\MDK-ARM\LED.h)(0x6558D749)
 I (..\MDK-ARM\LDR.h)(0x65579132)
 F (.\IR_sensor.h)(0x65589580)()
-F (.\current_sensor.c)(0x6554F440)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/current_sensor.o -MD)
-I (..\MDK-ARM\current_sensor.h)(0x6554F440)
-I (..\Core\Inc\main.h)(0x6554EA7E)
+F (.\current_sensor.c)(0x655A1F68)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/current_sensor.o -MD)
+I (..\MDK-ARM\current_sensor.h)(0x655A1F68)
+I (..\Core\Inc\main.h)(0x6558E849)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x64898AFE)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x654B42CC)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x64898AFE)
@@ -138,9 +138,9 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x64898AFE)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x64898AFE)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h)(0x64898AFE)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x64898AFE)
-F (.\current_sensor.h)(0x6554F440)()
-F (../Core/Src/main.c)(0x6558D67B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/main.o -MD)
-I (..\Core\Inc\main.h)(0x6554EA7E)
+F (.\current_sensor.h)(0x655A1F68)()
+F (../Core/Src/main.c)(0x655A22E6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/main.o -MD)
+I (..\Core\Inc\main.h)(0x6558E849)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x64898AFE)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x654B42CC)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x64898AFE)
@@ -171,12 +171,12 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x64898AFE)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x64898AFE)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h)(0x64898AFE)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x64898AFE)
-I (..\MDK-ARM\current_sensor.h)(0x6554F440)
+I (..\MDK-ARM\current_sensor.h)(0x655A1F68)
 I (..\MDK-ARM\LED.h)(0x6558D749)
-I (..\MDK-ARM\LDR.h)(0x65579132)
 I (..\MDK-ARM\IR_sensor.h)(0x65589580)
+I (..\MDK-ARM\LDR.h)(0x65579132)
 F (../Core/Src/stm32f1xx_it.c)(0x654E4F99)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/stm32f1xx_it.o -MD)
-I (..\Core\Inc\main.h)(0x6554EA7E)
+I (..\Core\Inc\main.h)(0x6558E849)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x64898AFE)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x654B42CC)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x64898AFE)
@@ -208,8 +208,8 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x64898AFE)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h)(0x64898AFE)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x64898AFE)
 I (..\Core\Inc\stm32f1xx_it.h)(0x654E4F99)
-F (../Core/Src/stm32f1xx_hal_msp.c)(0x6555CE21)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/stm32f1xx_hal_msp.o -MD)
-I (..\Core\Inc\main.h)(0x6554EA7E)
+F (../Core/Src/stm32f1xx_hal_msp.c)(0x655A1E43)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O3 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM-I./RTE/_LightSystem_HAL-IC:/MDK/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/MDK/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o lightsystem_hal/stm32f1xx_hal_msp.o -MD)
+I (..\Core\Inc\main.h)(0x6558E849)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x64898AFE)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x654B42CC)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x64898AFE)

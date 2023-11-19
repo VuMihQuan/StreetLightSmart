@@ -18,13 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "current_sensor.h"
-#include "LED.h"
-#include "LDR.h"
-#include "IR_sensor.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "current_sensor.h"
+#include "LED.h"
+#include "IR_sensor.h"
+#include "LDR.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -66,21 +66,22 @@ static void MX_ADC2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint32_t voltage_read[3];
+uint16_t voltage_read[3];
 float rawVoltage[3];
 float Voltage[3];
 float pre_Voltage[3];
 int LDR_length = 3;
-float current = 0;
 uint16_t nightTime;
 int task=0;
-/* USER CODE END 0 */
-int t = 0;
-
-uint32_t keep = 0;
+uint32_t keep;
+float noise_1 = 2.1177;
+float noise_2 = 2.1562;
+float noise_3 = 1.96;
 uint32_t *timekeep = &keep;
-uint32_t g;
-int h;
+float sensitivity = 0.185;
+float current[3];
+/* USER CODE END 0 */
+
 /**
   * @brief  The application entry point.
   * @retval int
@@ -90,7 +91,7 @@ int main(void)
   /* USER CODE BEGIN 1 */
    
   /* USER CODE END 1 */
-
+ 
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -125,7 +126,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		g = HAL_GetTick();
      for (int i = 0; i < 3; i++) {
         pre_Voltage[i] = 0;
     }
@@ -141,20 +141,24 @@ int main(void)
 				}
 				train(3000, &keep,&htim2, task);
 				for(int i = 0;i< 1000;i++)
-			{
-				HAL_ADC_Start_DMA(&hadc1, (uint32_t*)voltage_read, 3);
-        ConvertVoltage(voltage_read, Voltage);
-				pre_Voltage[0] += Voltage [0];
-				pre_Voltage[1] += Voltage [1];
-				pre_Voltage[2] += Voltage [2];
-			}
-        rawVoltage[0] = pre_Voltage[0]/1000;
-        rawVoltage[1] = pre_Voltage[1]/1000; 
-        rawVoltage[2] = pre_Voltage[2]/1000;
+				{
+					HAL_ADC_Start_DMA(&hadc1, (uint32_t*)voltage_read, 3);
+					ConvertVoltage(voltage_read, Voltage);
+					for(int i =0; i<3; i++)
+					{
+						pre_Voltage[i] += Voltage [i];
+					}
+				}
+        rawVoltage[0] = pre_Voltage[0]/1000*noise_1;
+        rawVoltage[1] = pre_Voltage[1]/1000*noise_2; 
+        rawVoltage[2] = pre_Voltage[2]/1000*noise_3;
     }
     else turnOffLed(&htim2);
     /* USER CODE END WHILE */
-
+		for(int i =0; i<3; i++)
+		{
+			current[i] = (rawVoltage[i] - 2.5)/sensitivity;
+		}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -178,7 +182,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI_DIV2;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL14;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -193,7 +197,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
@@ -415,6 +419,12 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pin : LED1_Pin */
+  GPIO_InitStruct.Pin = LED1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(LED1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : IR1_Pin IR2_Pin */
   GPIO_InitStruct.Pin = IR1_Pin|IR2_Pin;

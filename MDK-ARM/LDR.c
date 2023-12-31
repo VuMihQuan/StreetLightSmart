@@ -2,7 +2,7 @@
 
 int checkDay(uint16_t data)
 {
-    if(data > 500)	
+    if(data > 1000)	
     {
         return 1;
     }
